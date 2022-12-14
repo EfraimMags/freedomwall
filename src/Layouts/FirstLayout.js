@@ -1,13 +1,14 @@
 import React from "react";
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-const FirstLayout = () => {
+import Header from "../components/Header";
+
+
+const FirstLayout = (props) => {
 
     return(
         <>
         <Header/>
-        <p>first layout</p>
-        <Footer/>
+        <p>this is the normal page</p>
+        
         </>
     );
 }

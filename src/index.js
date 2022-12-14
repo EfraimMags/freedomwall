@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import FirstLayout from './Layouts/FirstLayout';
-import SecondLayout from './Layouts/SecondLayout';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css'
+import App from './helpers/App'
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FirstLayout/>
-    <hr></hr>
-    <SecondLayout/>
+   <App/>
   </React.StrictMode>
 );
 
