@@ -1,31 +1,30 @@
-import React, {useState} from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from '../pages/Home'
-import About from '../pages/About'
-import Post from '../pages/Post'
-import Contact from '../pages/Contact'
-import FirstLayout from '../Layouts/FirstLayout'
-import { UserContext } from "../helpers/UserContext";
+import React, { useState, useEffect } from "react";
+import MyRoutes from './MyRoutes'
+import axios from "axios";
 
-const App = () =>{
-
-    const [msg, setmsg] = useState('hello world');
-    return(
-
-     <UserContext.Provider value={{msg, setmsg}}>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<FirstLayout/>}>
-                    <Route index element={<Home />} />
-                    <Route path="About" element={<About />} />
-                    <Route path="Contact" element={<Contact />} />
-                    <Route path="Post" element={<Post />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    </UserContext.Provider>
-    );
-
+const App = () => {
+    const[list, setList] = useState([]);
     
+    useEffect(() => {
+        axios
+            .get('https://jsonplaceholder.typicode.com/posts')
+            .then( 
+                res => {
+                    setList(res.data)
+                    console.log("im in")
+                })
+            .catch(
+                err => {
+                    console.log(err)
+                })
+       
+    },[])
+    
+    
+    return(
+        <>  
+            <MyRoutes message = {{list, setList}}/>
+        </>
+    );
 }
 export default App

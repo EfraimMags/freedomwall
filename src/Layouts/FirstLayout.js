@@ -7,8 +7,6 @@ const FirstLayout = (props) => {
     return(
         <>
         <Header/>
-        <p>this is the normal page</p>
-        
         </>
     );
 }

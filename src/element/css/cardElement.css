@@ -1,0 +1,13 @@
+.homeCard{
+    transition: transform .2s;
+    padding: 0;
+
+}
+.homeCard:hover {
+    transform: scale(1.2);
+}
+
+.card-text{
+    margin: 20px;
+    margin-top: 50px;
+}

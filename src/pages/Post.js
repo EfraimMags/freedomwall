@@ -1,15 +1,20 @@
 import React, {useContext} from "react";
-import {UserContext} from '../helpers/UserContext'
+import {UserContext} from '../helpers/UserContext';
+import './css/post.css';
+import PostElement from '../element/PostElement';
+
 const Post = () => {
 
-    const {msg, setmsg} = useContext(UserContext)
+    const {list, setList} = useContext(UserContext)
+    
     return (
 
-    <>
-    {msg}
-    <p>post Page</p>
-    <button className = "btn bnt-primary" onClick={() => setmsg('pangit')}> Click </button>
-    </>
+    
+        <div className="container-fluid postPage">
+            <PostElement posting = {{list, setList}}/>
+        </div>
+        
+    
     );
 }
 
