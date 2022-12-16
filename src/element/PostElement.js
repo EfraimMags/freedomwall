@@ -1,29 +1,40 @@
 import React,{useState} from "react";
 import './css/postElement.css'
-import { Outlet, Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 const PostElement = (props) => {
 
+    const navigate = useNavigate();
     const [topic, setTopic] = useState('');
     const [user, setUser] = useState('');
     const [msg, setMsg] = useState('');
-    const postData = () =>{
-
    
+
+    const postData = (e) => {
+        e.preventDefault();
+        
+        if(msg === "" || user === ""){
+            return 
+        }
+
         props.posting.setList([{
             id: Object.keys(props.posting.list).length + 1,
             body: msg,
             title: topic,
             userId: user
-        },...props.posting.list])
+         },...props.posting.list])
+         navigate('/1')
 
+            
+          
     }
+  
+
     return(
        <>
-        <form className="row justify-content-center ">
+        <form className="row justify-content-center  " onSubmit={postData} >
             <div className="form-group card col-lg-4 col-md-4 gap-3 formCard ">
-                <h3 className="text-center mt-4">Create a Post</h3>
+                <h1 className="text-center mt-4 fw-semibold">Create a Post</h1>
                 <label className="mt-4" >Topic:</label>
                 <input 
                     onChange={(event) => setTopic(event.target.value)}
@@ -46,10 +57,10 @@ const PostElement = (props) => {
                     value ={msg}id="exampleFormControlTextarea1" 
                     rows="3">
                 </textarea>
-                <Link className ="link" to="/Home"><button onClick={postData} className="text-center btn btn-primary postbtn mb-5">Post</button></Link>
+                <button className="text-center btn btn-warning postbtn mb-3">Post</button>
             </div>
         </form>
-       </>
+      </>
     );
 }
 export default PostElement

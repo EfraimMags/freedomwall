@@ -1,0 +1,21 @@
+.contact{
+    margin-top: 170px;
+    margin-bottom: 120px;
+    padding: 50px;
+    width: 50%;
+}
+.cTitle{
+    color: #29335c;
+}
+.btnContact{
+    color: #29335c;
+    font-weight: bold;
+    padding: 15px;
+    transition: transform .2s;
+}
+
+.btnContact:hover{
+    transform: scale(.9);
+    color: #29335c;
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+.singlePost{
+
+    margin-top: 130px;
+    margin-bottom: 100px;
+    
+}
+
+.singlePostCard{
+
+    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    transition: transform .2s;
+    padding: 0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 1px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffc107;
+    
+}
+
+.postName{
+    margin-top: 10px;
+    font-size: 40px;
+}
+.postHighlights{
+    color: #29335c;
+}

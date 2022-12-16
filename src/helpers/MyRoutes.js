@@ -6,7 +6,8 @@ import Post from '../pages/Post'
 import Contact from '../pages/Contact'
 import FirstLayout from '../Layouts/FirstLayout'
 import { UserContext } from "./UserContext";
-
+import SinglePostPage from "../pages/SinglePostPage";
+import NoPage from "../pages/NoPage";
 
 const MyRoutes = (props) =>{
    
@@ -20,6 +21,9 @@ const MyRoutes = (props) =>{
                     <Route path="About" element={<About />} />
                     <Route path="Contact" element={<Contact />} />
                     <Route path="Post" element={<Post />} />
+                    <Route path=":id" element = {<SinglePostPage/>}/>
+                    <Route path="*" element={<NoPage />} />
+
                 </Route>
             </Routes>
         </BrowserRouter>

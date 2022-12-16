@@ -2,11 +2,12 @@ import React from "react";
 import Header from "../components/Header";
 
 
-const FirstLayout = (props) => {
+const FirstLayout = () => {
 
     return(
         <>
-        <Header/>
+            <Header/>
+       
         </>
     );
 }

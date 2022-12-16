@@ -1,10 +1,19 @@
 .formCard {
-    background-color: aquamarine;
-}
-form{
-
-    height: 500px;
+    background-color: azure;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .postbtn{
+    transition: transform .05s;
+    margin-top:20px;
     width: 100px;
+    margin-bottom: 0px;
+    
+}
+
+.postbtn:hover{
+    transform: scale(1.03);
+    background-color:#29335c;
+    border: 1px solid #29335c;
+    font-weight: bold;
+    color: #ffc107;
 }

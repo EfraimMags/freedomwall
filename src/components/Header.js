@@ -13,14 +13,13 @@ const Header = () => {
     return(
         <>
           <header>
-            <h2>freeDomWall</h2>
+            <h2 className="logo">FreeDomWall</h2>
             <nav ref={navRef}>
               <Link className ="link" to="/">Home</Link>
               <Link className ="link" to="/About">About</Link>
-              
               <Link className ="link" to="/Contact">Contact</Link>
               <Link className ="link" to="/Post">
-                <button className="btn btn-warning">Post a something</button>
+                <button className="btn btn-warning btnHead   ">Post something</button>
               </Link>
               <button
                 className="nav-btn nav-close-btn"
@@ -28,7 +27,7 @@ const Header = () => {
                 <FaTimes />
               </button>
             </nav>
-            <button className="nav-btn" onClick={showNavbar}>
+            <button className="nav-btn " onClick={showNavbar}>
               <FaBars />
             </button>
           </header>

@@ -1,4 +1,46 @@
-
 .home{
-    margin-top: 100px;
+    margin-top: 80px;
+   
 }
+
+.heroSection{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: azure;
+}
+.btnHero{
+    margin: 3px;
+    padding: 20px;
+    transition: transform .2s;
+    
+}
+.btnHero:hover{
+    transform: scale(.9);
+}
+
+.btnpr{
+    transition: transform .2s;
+    margin: 3px;
+    padding: 20px;
+    background-color:aliceblue;
+}
+.btnpr:hover{
+    transform: scale(.9);
+    background-color:aliceblue;
+}
+.homeCard{
+    transition: transform .2s;
+    padding: 0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 1px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffc107;
+}
+
+.homeCard:hover {
+    transform: scale(1.08);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 3px 0 rgba(0, 0, 0, 0.19);
+
+}
+.highlights{
+    font-size: x-large;
+}
+
