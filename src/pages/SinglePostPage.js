@@ -18,7 +18,6 @@ const SinglePostPage = () =>{
                 <h1 className="fw-bold lh-1 postName">A post to <span className="postHighlights">{myName}</span></h1> 
                 <div className="col-lg-5 col-md-6  card singlePostCard">
                     <CardElement
-                    
                     key = {keys}
                     name = {myName}
                     title = {list[keys].title}
