@@ -1,6 +1,6 @@
 html {
     --scrollbarBG: #CFD8DC;
-    --thumbBG: #29335c;
+    --thumbBG: #1F1D20;
   }
   body::-webkit-scrollbar {
     width: auto;

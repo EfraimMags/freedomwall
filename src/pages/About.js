@@ -10,6 +10,7 @@ const About = () => {
         <div className="container about ">
             <div className="row flex-lg-row-reverse align-items-center">
                 <div className="col-lg-6 col-md-6 text-center">
+                  
                  <img className="imgage"src={imgHero} alt="about"/>
                 </div>
                 <div className="col-lg-6 col-md-6">

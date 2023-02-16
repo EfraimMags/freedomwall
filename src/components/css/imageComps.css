@@ -1,0 +1,32 @@
+.imgcomps{
+    width:11%;
+    height: 11%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid #1F1D20;
+    
+}
+.imgBck{
+    width:8%;
+    height: 8%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+    border-radius: 5px;
+    border: 2px solid #1F1D20;
+}
+
+.active{
+    border: 3px solid #1F1D20;
+    transform: scale(.9);
+    transition: border .2s;
+    transition: transform .2s;
+}
+.inactive{
+    border: 2px solid #1F1D20;
+    transform: scale(1);
+    transition: transform .2s;
+    transition: border .2s;
+}

@@ -17,13 +17,12 @@ const MyRoutes = (props) =>{
             <Routes>
                 <Route path="/" element={<FirstLayout/>}>
                     <Route index element={<Home />} />
-                    <Route path = "Home" element={<Home />}/>
+                    <Route path ="Home" element={<Home />}/>
                     <Route path="About" element={<About />} />
                     <Route path="Contact" element={<Contact />} />
                     <Route path="Post" element={<Post />} />
                     <Route path=":id" element = {<SinglePostPage/>}/>
                     <Route path="*" element={<NoPage />} />
-
                 </Route>
             </Routes>
         </BrowserRouter>

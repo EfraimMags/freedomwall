@@ -2,9 +2,12 @@
 	font-weight: bold;
 	margin-right: 0px;
 }
+
 .btnHead{
 	transition: transform .2s;
 	color: #29335c;
+	border: 2px solid #1F1D20;
+	box-shadow: 2px 2px #1F1D20;
 }
 .btnHead:hover{
 	transform: scale(.99);
@@ -23,7 +26,7 @@ header{
   position: fixed;
   z-index: 1;
   top:0;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 1px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 3px solid #1F1D20;
 }
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
@@ -35,10 +38,10 @@ header{
 }
 
 :root {
-	--mainColor: #29335c;
+	--mainColor: 	#f1f0f0;
 	--mainColorLight: #5767aa;
 	--secondaryColor: #db2b39;
-	--textColor: #eee;
+	--textColor: #1F1D20;
 }
 
 header {

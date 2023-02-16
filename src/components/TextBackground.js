@@ -1,0 +1,48 @@
+
+import React,{useState,useContext, useEffect} from "react";
+import ImageComps from "./ImageComps";
+import './css/txtbckgrnd.css'
+
+const TextBackground= (props) => {
+    let list = props.listofbackgrounds;
+    const [name, setName] = useState('');
+    const [imgIndex, setIndex] = useState(-1);
+
+    const changeStyle = (index) =>{
+        if(imgIndex === index){
+            return "active"
+        }else{
+            return "inactive"
+        }
+    }
+
+    useEffect(()=>{
+        props.setbackground(name)
+    },[name])
+
+
+    return(
+        <>
+        
+        <div className="bck-part">
+         Choose background: 
+        
+        {list.map((imgs, keys)=> (
+           <ImageComps 
+            page = 'background'
+            setName = {setName}
+            imgs ={imgs} 
+            key ={keys}
+            index ={keys}
+            setIndex= {setIndex}
+            changeStyle = {changeStyle(keys)}
+            />
+        ))}
+      
+        </div>
+        
+        </>
+    );
+}
+
+export default TextBackground;

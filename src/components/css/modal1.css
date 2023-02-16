@@ -1,0 +1,39 @@
+.modalwrapper{
+ 
+
+    border: 3px solid #1F1D20;
+    border-radius: 10px;
+    box-shadow:  10px 10px #1F1D20;
+    background-color: #ffc107;
+    height: fit-content;
+    margin: auto;
+
+}
+
+.modalCon{
+
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(200, 200, 200);
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+  left: 0;
+  top:0;
+
+
+}
+
+.modal1Btn{
+  border: 2px solid #1F1D20;
+  background-color: #f1f0f0;
+  box-shadow: 5px 5px #1F1D20;
+  transition: transform .2s,  box-shadow .1s;
+}
+
+.modal1Btn:hover {
+  transform: scale(.985);
+  border: 2px solid #1F1D20;
+  background-color: #f1f0f0;
+  box-shadow: 3px 3px #1F1D20;
+}

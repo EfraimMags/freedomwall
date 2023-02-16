@@ -3,7 +3,7 @@ import {UserContext} from '../helpers/UserContext';
 import './css/post.css';
 import PostElement from '../element/PostElement';
 import Footer from "../components/Footer";
-
+import PostLayout1 from "../element/PostLayout1";
 const Post = () => {
 
     const {list, setList} = useContext(UserContext)

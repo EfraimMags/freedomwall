@@ -12,13 +12,16 @@ const Header = () => {
     
     return(
         <>
+        
           <header>
             <h2 className="logo">FreeDomWall</h2>
+    
             <nav ref={navRef}>
-              <Link className ="link" to="/">Home</Link>
-              <Link className ="link" to="/About">About</Link>
-              <Link className ="link" to="/Contact">Contact</Link>
-              <Link className ="link" to="/Post">
+            
+              <Link className ="link"  onClick={showNavbar} to="/">Home</Link>
+              <Link className ="link" onClick={showNavbar} to="/About">About</Link>
+              <Link className ="link" onClick={showNavbar}  to="/Contact">Contact</Link>
+              <Link className ="link"  onClick={showNavbar} to="/Post">
                 <button className="btn btn-warning btnHead   ">Post something</button>
               </Link>
               <button
@@ -27,6 +30,7 @@ const Header = () => {
                 <FaTimes />
               </button>
             </nav>
+            
             <button className="nav-btn " onClick={showNavbar}>
               <FaBars />
             </button>

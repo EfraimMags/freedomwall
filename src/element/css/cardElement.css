@@ -3,3 +3,44 @@
     margin: 10px;
     margin-top: 10px;
 }
+
+.avatar-icon {
+    border: 2px solid #1F1D20;
+    width: 19%;
+    height: 20%;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+.wrapper {
+    height: 200px;
+    padding: 5px;
+  
+    border-radius: 5px;
+}
+.card-title{
+    margin: auto;
+}
+.date{
+    font-size: 70%;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.showDiv{
+    font-size: 70%;
+    font-weight: bold;
+    margin-top: 2px;
+}
+.hideDiv{
+    height: 40px;
+    overflow: hidden;
+    font-size: 70%;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.cMore{
+    font-weight: bold;
+    font-size: 80%;
+}
+
