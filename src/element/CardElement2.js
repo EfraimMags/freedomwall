@@ -18,7 +18,7 @@ const CardElement = (props) => {
       return(
         <>
         <div className="card-body ">
-            <div className=" mb-3 fw-bold gap-5 "><img  className = "avatar-icon text-start"src = {`sampleImg/${avatarfilename}`} alt = "avatar"/>{postname === '' ?   avatarname : postname}</div>
+            <div className=" mb-3 fw-bold gap-5 "><img  loading="lazy" className = "avatar-icon text-start"src = {`sampleImg/${avatarfilename}`} alt = "avatar"/>{postname === '' ?   avatarname : postname}</div>
             <div className="wrapper row" 
                 style={post2image !== '' ? {backgroundImage: `url(sampleImg/${post2image})`, backgroundSize:"contain", backgroundRepeat:"no-repeat", backgroundPosition: "center"} : {backgroundColor: "#1F1D20"}}>               
            </div>

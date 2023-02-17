@@ -7,8 +7,8 @@ const sampleRoute = require('./route/post-route.js');
 
 const port = 3002;
 
-server.use(bodyParser.urlencoded({extended: false})); //body parser for recieving data from client through urlencoded
-server.use(bodyParser.json()); //body parser for recieving data from client through json
+server.use(bodyParser.urlencoded({limit: '50mb', extended: true})); //body parser for recieving data from client through urlencoded
+server.use(bodyParser.json({limit: '50mb'})); //body parser for recieving data from client through json
 server.use(cors({origin: 'http://localhost:3000'})) //getting server clients response
 
 server.use('/', sampleRoute);

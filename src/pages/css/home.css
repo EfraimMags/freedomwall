@@ -49,9 +49,7 @@
     border: 3px solid #1F1D20;
     
 }
-.homeCard::before{
-    border: 3px solid #ffc107;
-}
+
 .homeCard:hover {
    
     transform: scale(1.08);

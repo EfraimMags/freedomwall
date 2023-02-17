@@ -5,11 +5,16 @@ import './css/home.css'
 import { useNavigate } from "react-router-dom";
 import HeroSection from "../components/HeroSection";
 import CardElement2 from "../element/CardElement2";
-
+import axios from "../helpers/axios";
 
 const Home = () => {
-    const {list, setList, names, post, serverRoute,num} = useContext(UserContext);
+    const {tempList,  forceUpdate,  setPost,  setNum,  post,  num} = useContext(UserContext);
     const navigate = useNavigate();
+ 
+
+    useEffect(()=>{
+        document.body.style.overflow = "scroll"
+    },[])
 
 
     return(
@@ -21,9 +26,8 @@ const Home = () => {
                 list = {Object.keys(post).length}
             />
             <div className="row gap-5 justify-content-center areaPost">
-                
-            { Object.keys(post).length !== 0 ?  
-                post.map((element, keys) => {
+            {post &&  post.map((element, keys) => {
+                 
                     if(element.postlistkind === 1){
                         return(
                             
@@ -58,11 +62,11 @@ const Home = () => {
                                     post2date = {element.postlistdate}
                                     post2topic = {element.post2topic}
                                 />
+                                 { console.log("from post 2 ---- " +element.postlistdate+ " ")}
                             </div>
                         )
                     }
-                    
-                    }) : console.log('waiting')}
+                    })}
             
             </div>
         </div>

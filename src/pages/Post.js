@@ -12,7 +12,12 @@ const Post = () => {
 
         <>
         <div className="container-fluid postPage">
-            <PostElement posting = {{list, setList}}/>
+            <div className="row ">
+                <div className="col">
+                <PostElement posting = {{list, setList}}/>
+                </div>
+            </div>
+          
         </div>
         <Footer/>
         </>

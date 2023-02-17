@@ -7,7 +7,8 @@ const FirstLayout = () => {
     return(
         <>
             <Header/>
-       
+
+            
         </>
     );
 }

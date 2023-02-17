@@ -7,6 +7,7 @@ const TextBackground= (props) => {
     let list = props.listofbackgrounds;
     const [name, setName] = useState('');
     const [imgIndex, setIndex] = useState(-1);
+    const [avatarID, setAvatarID] = useState(0); // nothing
 
     const changeStyle = (index) =>{
         if(imgIndex === index){
@@ -18,6 +19,7 @@ const TextBackground= (props) => {
 
     useEffect(()=>{
         props.setbackground(name)
+        
     },[name])
 
 
@@ -29,9 +31,11 @@ const TextBackground= (props) => {
         
         {list.map((imgs, keys)=> (
            <ImageComps 
+            avatarID = {imgs.bckid}  // nothing
+            setAvatarID = {setAvatarID}  // nothing
             page = 'background'
             setName = {setName}
-            imgs ={imgs} 
+            imgs ={imgs.bckfilename} 
             key ={keys}
             index ={keys}
             setIndex= {setIndex}

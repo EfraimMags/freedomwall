@@ -15,7 +15,7 @@ const Contact = () => {
             <button className="btn btn-warning btnContact">Message Us</button>
             </div>
           
-            <Footer/>
+            
         </> 
     );
 }

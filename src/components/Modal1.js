@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import './css/modal1.css'
 const Modal1 = (props) =>{
-    const [name, setName] = useState('The Anonymous')
+    const [name, setName] = useState('')
    
 
     const btnFunction = () => {
-     
         props.setModal(false) 
-        
+        props.setName(name)
     }
+
     return (
             //enter anonymousename
             <>
@@ -22,7 +22,7 @@ const Modal1 = (props) =>{
                                 <h3 className = "fw-bold"style={{margin:'0'}}>{name}</h3>
                                 <h2 className="fw-bold mt-3 mb-1" style={{fontSize: '110%'}}>Enter your anonymous name</h2>   
                                 <input className = "mb-1 mt-3" style = {{textAlign: "center", width: '100%', height: '40px', borderRadius: '5px', border: '2px solid #1F1D20'}}
-                                type= "text" id = "name" onChange={(e)=> setName(e.target.value)} placeholder = " Anonymous"></input>
+                                type= "text" id = "name" onChange={(e)=> setName(e.target.value)} placeholder = "Enter your anonymous name"></input>
                                 <button onClick={() => {btnFunction()}}className="btn btn-warning modal1Btn" style ={{width:'100%',}}>submit</button>
                       
                         </div>

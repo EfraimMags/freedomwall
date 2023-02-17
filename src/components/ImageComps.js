@@ -7,14 +7,17 @@ const ImageComps = (props) =>{
     const selectImage= () =>{
         props.setName(props.imgs)
         props.setIndex(props.index)
+        props.setAvatarID(props.avatarID)
     }
 
     return (
         <> 
-         <img onClick={selectImage} 
+         <img 
+           onClick={selectImage} 
             className={`${selectImagestyle} ${props.changeStyle}`}
             src={`sampleImg/${props.imgs}`} 
-            alt="about"
+            alt="x"
+            loading="lazy"
         />
         </>
     );

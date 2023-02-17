@@ -1,5 +1,7 @@
 .postPage{
   background-color: rgba(200, 200, 200);
-  height: 100vh;
-  width: 100%;
+  margin-top:80px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
 }
