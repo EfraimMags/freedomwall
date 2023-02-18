@@ -32,9 +32,43 @@ exports.addPost = (connection) => {
 
 }
 
+exports.addPost2 = (connection) => {
+
+  return async (req, res) => {
+ 
+     const avatarKey = req.body.avatarid
+     const name = req.body.name
+     const img = req.body.img
+     const topic = req.body.topic
+   
+   await connection.query(`INSERT INTO post2 (postname, postavatarid, post2topic, post2image) values (?,?,?,?)`,[name, avatarKey, topic, img], (error,results) => {
+       if (error) throw error;
+     })
+ 
+    
+  }
+ 
+ }
+
 exports.getSinglePost = (connection) =>{
   return async (req, res) => {
   await connection.query('SELECT * from post1', (error, results) =>{
+      if (error) throw error;
+      data = Object.values(JSON.parse(JSON.stringify(results)));
+      select = [];
+      data.map( (e, keys) =>{
+        if(keys === Object.keys(data).length-1){
+          select = e
+        }
+      })
+      res.send(select)
+    })
+  }
+}
+
+exports.getSinglePost2 = (connection) =>{
+  return async (req, res) => {
+  await connection.query('SELECT * from post2', (error, results) =>{
       if (error) throw error;
       data = Object.values(JSON.parse(JSON.stringify(results)));
       select = [];
@@ -157,7 +191,21 @@ exports.getAlllist = (connection) => {
       if (error) throw error;
       data = Object.values(JSON.parse(JSON.stringify(results)));
       res.send(results)
-      console.log(Object.keys(data).length)
+     
+    })
+  }
+}
+
+exports.checklogin = (connection) => {
+  return async (req, res) => {
+    const username = req.body.username
+    const pass = req.body.pass
+    console.log(username)
+    console.log(pass)
+    await connection.query(`SELECT personid, username, usertype from person where username =('${username}') and password = ('${pass}')`, (error, results) => {
+      if (error) throw error;
+      console.log(results)
+      res.send(results)
     })
   }
 }

@@ -20,14 +20,15 @@ const PostElement = (props) => {
     const [imgNames, setimgNames] = useState([]);
     const [bckNames, setBckNames] = useState([]);
     const [avatarKey, setAvatarKey] = useState(0);
-    const avatarURL = '/avatar';
-    const bckURL = '/background';
-    const sPageURL = '/spage';
     const [spage, setSpage] = useState(0);
+    const [spage2, setSpage2] = useState (0);
     const [layout, setLayout] = useState(1);
     const [isSent, setSend]= useState (0);
     const [file, setFile] = useState('');
-   
+    const avatarURL = '/avatar';
+    const bckURL = '/background';
+    const sPageURL = '/spage';
+    const sPage2URL = '/spage2';
     useEffect(() =>{
 
         async function fetchAvatar(){
@@ -50,22 +51,27 @@ const PostElement = (props) => {
             setSpage(response.data)
         }
         fetchSingleList()
+
+
+        async function fetchSingleList2(){
+            const response = await axioshelper.get(sPage2URL)
+            console.log(response.data)
+            setSpage2(response.data)
+        }
+        fetchSingleList2()
       
     },[])
     
     useEffect(()=>{
-        isModal === true ? document.body.style.overflow = "hidden" : document.body.style.overflow = "scroll"
-        isModal === false ? window.scrollTo(0, 0) : window.scrollTo(5, 0) 
+        isModal === true ? document.body.style.overflow = "hidden" :
+                           document.body.style.overflow = "scroll"
+        isModal === false ? window.scrollTo(0, 0) : 
+                    window.scrollTo(5, 0) 
     },[isModal])
 
     const postData = (e) => {
         e.preventDefault();
-        let data = [{
-            avatarid: avatarKey ,
-            name: name === '' ? avatarName : name,
-            backgroundName: backgroundName ,
-            topic: topic
-        }]
+       
         if(topic === ''){
             return
         }
@@ -93,21 +99,45 @@ const PostElement = (props) => {
         forceUpdate();
         forceUpdate();
         forceUpdate();
+        forceUpdate();
         navigate('/');
        
           
     }
+
     const sampleUpload = (e) =>{
         e.preventDefault();
         const formData = new FormData()
-
         formData.append('image', file)
-        console.log(file)
-        axios.post(`http://localhost:3002/upload`, formData,{
-            
+        axios.post(`http://localhost:3002/upload`, formData ,{
+
         })
         .then((res) => console.log(res))
         .catch((err) => console.log(err))
+        
+       axios.post(`http://localhost:3002/add-post2`, {
+           
+            avatarid: avatarKey ,
+            name: name === '' ? avatarName : name,
+            img:  "freedomwall_"+file.name,
+            topic: topic
+            
+
+        })
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err))
+        
+        axios.post(`http://localhost:3002/addpostList`, {
+            postCategory: layout,
+            spage: spage2.post2id + 1
+        })
+        .then(() => console.log('added'))
+        .catch((err) => console.log(err))
+        
+        forceUpdate();
+        forceUpdate();
+        forceUpdate();
+        navigate('/')
 
     }
     
@@ -123,10 +153,10 @@ const PostElement = (props) => {
     
        <UserContext.Provider value={{setFile, setAvatarName,bckNames,imgNames,setbackgroundName, setTopic, setAvatarKey}}>
             {isModal && <Modal1 setName = {setName} setModal = {setModal}/>}
-         
-            <form className="row align-self-center justify-content-center formOuter" onSubmit = {sampleUpload} encType = "multipart/form-data" method="post">
+          
+            <form className="row align-self-center justify-content-center formOuter" onSubmit = {layout === 2 ? sampleUpload : postData} encType = "multipart/form-data" method="post">
                 <div className="form-group card col-10 col-lg-4 col-md-8 gap-3 formCard ">
-                    <h1 className="text-center mt-4 fw-semibold">Create a Post</h1>
+                    <h1 className="text-center mt-4 fw-semibold">Create a Post  {avatarKey}</h1>
                     <PostLayout1 layout = {layout}/>
                     <div className="btns">
                     <button className="text-center btn btn-warning postbtn mt-0">Post</button>

@@ -35,11 +35,12 @@ const PostLayout1 = (props) =>{
                 </div>
              
                 <textarea
-                    style={{backgroundColor: 'rgba(200, 200, 200)', border:'2px solid #1F1D20', textAlign: "center", resize: "none" }}
+                    style={{backgroundColor: 'rgba(200, 200, 200)', border:'2px solid #1F1D20', resize: "none", fontSize: "15px" ,fontWeight: 'bold' }}
                     onChange = {(event) => setMsg(event.target.value)}
-                    className="form-control mt-2 mb-2 align-middle" 
+                    className="form-control mt-2 mb-2" 
                     value = {msg} id="exampleFormControlTextarea1" 
-                    rows= {props.layout === 1 ? 5 : 3} >
+                    rows= {props.layout === 1 ? 5 : 3} 
+                    placeholder = "Enter Anything">
                 </textarea>
                 
                 <div>

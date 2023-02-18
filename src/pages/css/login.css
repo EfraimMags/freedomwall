@@ -1,0 +1,29 @@
+.loginForm{
+    margin: auto;
+    height: 100vh;
+    width: 100%;
+}
+
+.loginBtn{
+    
+    border: 2px solid #1F1D20;
+    background-color: #f1f0f0;
+    box-shadow: 5px 5px #1F1D20;
+}
+
+.logFormHolder {
+    margin: auto;
+    background-color: #ffc107;
+    border: 3px solid #1F1D20;
+    box-shadow: 10px 10px #1F1D20;
+    padding: 20px
+}
+
+.b{
+    margin: 0px;
+    padding: 0px;
+}
+input{
+    margin: 0;
+    padding: 3px;
+}

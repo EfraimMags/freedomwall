@@ -11,7 +11,7 @@ const CardElement = (props) => {
     let post2topic = props.post2topic
     let postname = props.postname 
     useEffect(() => {
-        post2topic.length > 30 ? setViewElement('hideDiv')  :
+        post2topic.length > 100 ? setViewElement('hideDiv')  :
         setViewElement('showDiv') 
     },[post2topic])
  
@@ -25,7 +25,7 @@ const CardElement = (props) => {
        
             <h6 className={`topic mt-3 card-title fw-bold ${viewELement}`} >{post2topic}</h6>
            <h6 className="fw-bold mt-1 cMore"> {viewELement === 'hideDiv' ? '...see more' : ''}</h6>
-            <h6 className="card-title date">{moment(post2date).startOf('hour').fromNow()}</h6>
+            <h6 className="card-title date">{moment(post2date).startOf('minutes').fromNow()}</h6>
             
          </div>
         </>

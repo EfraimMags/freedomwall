@@ -13,7 +13,7 @@ const ImageComps = (props) =>{
     return (
         <> 
          <img 
-           onClick={selectImage} 
+            onClick={selectImage} 
             className={`${selectImagestyle} ${props.changeStyle}`}
             src={`sampleImg/${props.imgs}`} 
             alt="x"

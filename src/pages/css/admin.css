@@ -1,0 +1,27 @@
+.aCon{
+    background-color: rgba(200, 200, 200);
+    margin-top: 80px;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.column{
+    height: 80vh;
+    border: 3px solid #1F1D20;
+    background-color: #f1f0f0;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 25px;
+    padding: 50px;
+    
+}
+
+.iconBoxes {
+    height: 50px;
+    background-color: #1F1D20;
+    border: 1px solid #1F1D20;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}

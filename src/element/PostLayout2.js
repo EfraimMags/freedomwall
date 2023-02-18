@@ -8,11 +8,13 @@ const PostLayout2 = (props) => {
     const onSelectFile = (event) => {
       const datafile = event.target.files[0]
       props.setFile(datafile)
+      console.log(datafile)
       setSelectedImages(URL.createObjectURL(datafile));
     };
 
     return (
       <section className="row gap-5 mt-3">
+       
         { selectedImages.length === 0 ? 
             <div className="col-3 mt-2">
                 {

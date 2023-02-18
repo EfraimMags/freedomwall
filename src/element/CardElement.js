@@ -17,7 +17,7 @@ const CardElement = (props) => {
             <div className="card-body ">
     
                 <div className=" mb-3 fw-bold gap-5 "><img  className = "avatar-icon text-start"src = {`sampleImg/${avatarfilename}`} alt = "avatar"/>{ postname === '' ?   avatarname : postname}</div>
-                <div className="wrapper row justify-align-center text-center " style={post1background != '' ? {backgroundImage: `url(sampleImg/${post1background})`, backgroundSize:"contain", backgroundRepeat:"no-repeat", backgroundPosition: "center"} : {border: "1px solid #1F1D20", backgroundColor: "#f0ad00"}}>
+                <div className="wrapper row justify-align-center text-center " style={post1background != '' ? {backgroundImage: `url(sampleImg/${post1background})`, backgroundSize:"cover", backgroundRepeat:"no-repeat", backgroundPosition: "center"} : {border: "1px solid #1F1D20", backgroundColor: "#f0ad00"}}>
                     <h6 className="card-title fw-bold">{post1topic}</h6> 
                 </div>
                 <h6 className="card-title date mt-2">{moment(new Date(post1date)).startOf('minutes').fromNow()}</h6>

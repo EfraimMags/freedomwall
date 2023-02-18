@@ -4,24 +4,21 @@
     border: 3px solid #1F1D20;
     box-shadow: 10px 10px #1F1D20;
 }
-.formOuter{
- 
 
-}
 .postbtn{
     width: 30%;
     transition: transform .05s;
     margin-top:20px;
     margin-bottom: 0px;
-    
+    border: 2px solid #1F1D20;
 }
 
 .postbtn:hover{
     transform: scale(1.03);
-    background-color:#29335c;
-    border: 1px solid #29335c;
+    background-color: #f1f0f0;
+    border: 2px solid #1F1D20;
     font-weight: bold;
-    color: #ffc107;
+    
 }
 
 .addImage{

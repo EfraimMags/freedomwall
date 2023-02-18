@@ -21,6 +21,7 @@ const Header = () => {
               <Link className ="link"  onClick={showNavbar} to="/">Home</Link>
               <Link className ="link" onClick={showNavbar} to="/About">About</Link>
               <Link className ="link" onClick={showNavbar}  to="/Contact">Contact</Link>
+              <Link className ="link" onClick={showNavbar}  to="/Login">Login</Link>
               <Link className ="link"  onClick={showNavbar} to="/Post">
                 <button className="btn btn-warning btnHead   ">Post something</button>
               </Link>

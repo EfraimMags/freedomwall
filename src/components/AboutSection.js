@@ -5,22 +5,23 @@ const AboutSection = () => {
     return(
         <>
         <h1><span className="title"> FreeDom </span> to Post...</h1>
-        <h6 className="fw-bold highlight text-center">
-             Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
+        <h6 className="fw-bold text-justify">
+         Freedom walls provide a space where individuals can express themselves freely 
+         without fear of judgment or censorship. In a world where freedom of speech is not
+         always guaranteed, having a designated area for people to share their thoughts and 
+         ideas is essential. These walls offer a platform for marginalized voices and can be
+         a powerful tool for social change.</h6>
         <p className="mt-5">
-             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-             when an unknown printer took a galley of type and scrambled it to make a type 
-             specimen book. It has survived not only five centuries, but also the leap into 
-             electronic typesetting, remaining essentially unchanged. It was popularised in 
-             the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-             and more recently with desktop publishing software like Aldus PageMaker including 
-             versions of Lorem Ipsum
-        </p>
+        freedom walls can be a means of promoting creativity and artistic expression.
+         Artistic works can be thought-provoking and inspire people to think critically about the
+         world around them. By providing a platform for artists to showcase their work, freedom walls
+          can stimulate creativity and encourage people to engage with their environment in a new way.  </p>
         <p className="mt-5 ">
-             Lorem Ipsum is simply <span className="highlight"> dummy text of the printing and typesetting industry. </span>
-             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-             
+        In summary, freedom walls are important because 
+        they allow for free expression, build community and solidarity, and promote creativity 
+        and artistic expression. By providing a safe and welcoming space for people to share their 
+        thoughts and ideas, freedom walls can play a vital role in fostering a more just and equitable
+        society.          
         </p>
         </>
     )

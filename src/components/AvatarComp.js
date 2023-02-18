@@ -7,7 +7,7 @@ const AvatarComp = (props) => {
     let list = props.listofavatar;
     const [name, setName] = useState('');
     const [imgIndex, setIndex] = useState(0);
-    const [avatarID, setAvatarID] = useState(0);
+    const [avatarID, setAvatarID] = useState(1);
 
     const changeStyle = (index) =>{
 

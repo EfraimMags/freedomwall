@@ -8,6 +8,8 @@ import FirstLayout from '../Layouts/FirstLayout'
 import { UserContext } from "./UserContext";
 import SinglePostPage from "../pages/SinglePostPage";
 import NoPage from "../pages/NoPage";
+import Login from "../pages/Login";
+import Admin from "../pages/Admin";
 
 const MyRoutes = (props) =>{
    
@@ -21,7 +23,9 @@ const MyRoutes = (props) =>{
                     <Route path="About" element={<About />} />
                     <Route path="Contact" element={<Contact />} />
                     <Route path="Post" element={<Post />} />
+                    <Route path="Admin" element={<Admin />} />
                     <Route path=":id" element = {<SinglePostPage/>}/>
+                    <Route path="Login" element = {<Login/>}/>
                     <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>
